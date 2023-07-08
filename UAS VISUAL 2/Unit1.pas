@@ -10,19 +10,19 @@ uses
 
 type
   TForm1 = class(TForm)
-    l2: TLabel;
-    l1: TLabel;
-    l3: TLabel;
-    l6: TLabel;
-    l4: TLabel;
-    l5: TLabel;
-    l7: TLabel;
-    l8: TLabel;
-    l9: TLabel;
-    l10: TLabel;
-    l11: TLabel;
-    l12: TLabel;
-    l13: TLabel;
+    lbl2: TLabel;
+    lbl1: TLabel;
+    lbl3: TLabel;
+    lbl6: TLabel;
+    lbl4: TLabel;
+    lbl5: TLabel;
+    lbl7: TLabel;
+    lbl8: TLabel;
+    lbl9: TLabel;
+    lbl10: TLabel;
+    lbl11: TLabel;
+    lbl12: TLabel;
+    lbl13: TLabel;
     dbgrd1: TDBGrid;
     btn1: TButton;
     btn2: TButton;

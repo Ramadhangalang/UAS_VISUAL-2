@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 258
-  Top = 167
+  Left = 341
+  Top = 201
   Width = 823
-  Height = 540
+  Height = 541
   Caption = 'SISWA'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +13,7 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object l2: TLabel
+  object lbl2: TLabel
     Left = 67
     Top = 170
     Width = 3
@@ -25,7 +25,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l1: TLabel
+  object lbl1: TLabel
     Left = 19
     Top = 7
     Width = 21
@@ -38,7 +38,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l3: TLabel
+  object lbl3: TLabel
     Left = 17
     Top = 37
     Width = 30
@@ -51,7 +51,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l6: TLabel
+  object lbl6: TLabel
     Left = 18
     Top = 62
     Width = 76
@@ -64,7 +64,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l4: TLabel
+  object lbl4: TLabel
     Left = 19
     Top = 94
     Width = 22
@@ -77,7 +77,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l5: TLabel
+  object lbl5: TLabel
     Left = 19
     Top = 126
     Width = 95
@@ -90,7 +90,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l7: TLabel
+  object lbl7: TLabel
     Left = 19
     Top = 162
     Width = 92
@@ -103,7 +103,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l8: TLabel
+  object lbl8: TLabel
     Left = 15
     Top = 194
     Width = 96
@@ -116,7 +116,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l9: TLabel
+  object lbl9: TLabel
     Left = 19
     Top = 226
     Width = 55
@@ -129,7 +129,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l10: TLabel
+  object lbl10: TLabel
     Left = 361
     Top = 122
     Width = 109
@@ -142,7 +142,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l11: TLabel
+  object lbl11: TLabel
     Left = 365
     Top = 182
     Width = 51
@@ -155,7 +155,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l12: TLabel
+  object lbl12: TLabel
     Left = 361
     Top = 150
     Width = 49
@@ -168,7 +168,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object l13: TLabel
+  object lbl13: TLabel
     Left = 369
     Top = 214
     Width = 46

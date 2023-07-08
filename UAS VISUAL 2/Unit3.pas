@@ -1,4 +1,4 @@
-unit Unit2;
+unit Unit3;
 
 interface
 
@@ -9,15 +9,16 @@ uses
   ComCtrls;
 
 type
-  TForm2 = class(TForm)
-    lbl2: TLabel;
+  TForm3 = class(TForm)
     lbl1: TLabel;
     lbl3: TLabel;
     lbl6: TLabel;
     lbl4: TLabel;
     lbl5: TLabel;
     lbl7: TLabel;
-    lbl10: TLabel;
+    lbl2: TLabel;
+    lbl8: TLabel;
+    lbl9: TLabel;
     btn1: TButton;
     btn2: TButton;
     btn3: TButton;
@@ -31,6 +32,8 @@ type
     dtp1: TDateTimePicker;
     cbb1: TComboBox;
     cbb2: TComboBox;
+    edt5: TEdit;
+    edt6: TEdit;
     dbgrd1: TDBGrid;
     con1: TZConnection;
     zqry1: TZQuery;
@@ -38,9 +41,9 @@ type
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
     zqry2: TZQuery;
-     procedure FormShow(Sender: TObject);
-    procedure bersih;
     procedure posisiawal;
+    procedure FormShow(Sender: TObject);
+    procedure bersih;
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
@@ -48,21 +51,21 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure btn6Click(Sender: TObject);
-
+  private
     { Private declarations }
   public
     { Public declarations }
   end;
 
 var
-  Form2: TForm2;
+  Form3: TForm3;
   id:string;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm2.btn1Click(Sender: TObject);
+procedure TForm3.btn1Click(Sender: TObject);
 begin
 btn1.Enabled:= false;
 btn2.Enabled:= True;
@@ -77,14 +80,16 @@ edt2.Enabled:= True;
 edt3.Enabled:= True;
 cbb1.Enabled:= True;
 edt4.Enabled:= True;
+edt5.Enabled:= True;
+edt6.Enabled:= True;
 cbb2.Enabled:= True;
 end;
 
-procedure TForm2.btn2Click(Sender: TObject);
+procedure TForm3.btn2Click(Sender: TObject);
 begin
 if edt1.Text='' then
   begin
-    ShowMessage('NAMA WALI KELAS BELUM DIISI DENGAN BENAR');
+    ShowMessage('NAMA ORANG TUA BELUM DIISI DENGAN BENAR');
     end else
     if edt2.Text=''then
     begin
@@ -100,33 +105,41 @@ if edt1.Text='' then
     end else
     if edt4.text=''then
     begin
-    ShowMessage('WALI KELAS BELUM SESUAI');
+    ShowMessage('PEKERJAAN BELUM SESUAI');
+    end else
+    if edt5.text=''then
+    begin
+    ShowMessage('NIK ATAU NOMOR KTP BELUM SESUAI');
+    end else
+    if edt6.text=''then
+    begin
+    ShowMessage('ALAMAT BELUM SESUAI');
     end else
     if cbb2.Text='' then
     begin
-     ShowMessage('JENIS KELAMIN BELUM DIISI DENGAN BENAR');
+     ShowMessage('STATUS ORANG TUS BELUM DIISI DENGAN BENAR');
     end else
-  if Form2.zqry1.Locate('Telp',edt2.Text,[]) then
+  if Form3.zqry1.Locate('Telp',edt2.Text,[]) then
   begin
    ShowMessage('DATA SUDAH ADA DALAM SISTEM');
   end else
   begin
 
  zqry1.SQL.Clear;
- zqry1.SQL.Add('insert into wali_kelas values(null,"'+edt1.Text+'","'+formatdatetime('yyyy-mm-dd',dtp1.Date)+'","'+edt2.Text+'","'+edt3.Text+'","'+cbb1.Text+'","'+edt4.Text+'","'+cbb2.Text+'")');
+ zqry1.SQL.Add('insert into orang_tua values(null,"'+edt1.Text+'","'+formatdatetime('yyyy-mm-dd',dtp1.Date)+'","'+edt2.Text+'","'+edt3.Text+'","'+cbb1.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+cbb2.Text+'")');
  zqry1.ExecSQL ;
 
  zqry1.SQL.Clear;
- zqry1.SQL.Add('select * from wali_kelas');
+ zqry1.SQL.Add('select * from orang_tua');
  zqry1.Open;
 ShowMessage('DATA BARHASIL DISIMPAN!');
 posisiawal;
 end;
 end;
 
-procedure TForm2.btn3Click(Sender: TObject);
+procedure TForm3.btn3Click(Sender: TObject);
 begin
-if (edt1.Text= '')or(edt2.Text ='')or(edt3.Text= '')or(cbb1.Text='')or(edt4.Text ='')or(cbb2.Text='') then
+if (edt1.Text= '')or(edt2.Text ='')or(edt3.Text= '')or(cbb1.Text='')or(edt4.Text ='')or(edt5.Text ='')or(edt6.Text ='')or(cbb2.Text='') then
 begin
   ShowMessage('INPUTAN WAJIB DIISI!');
 end else
@@ -138,27 +151,26 @@ end else
 begin
  ShowMessage('DATA BERHASIL DIUPDATE!');
 zqry1.SQL.Clear;
-zqry1.SQL.Add('Update wali_kelas set Nama_wali_kelas= "'+edt1.Text+'",Telp="'+edt2.Text+'",Pendidikan="'+edt3.Text+'",Wali_kelas="'+edt4.Text+'" where id_wali="'+id+'"');
+zqry1.SQL.Add('Update orang_tua set Nama_orangtua= "'+edt1.Text+'",Telp="'+edt2.Text+'",Pendidikan_terakhir="'+edt3.Text+'",Pekerjaan="'+edt4.Text+'" where Id_orgtua="'+Id+'"');
 zqry1. ExecSQL;
 
 zqry1.SQL.Clear;
-zqry1.SQL.Add('select * from wali_kelas');
+zqry1.SQL.Add('select * from orang_tua');
 zqry1.Open;
 
 posisiawal;
 end;
 end;
 
-
-procedure TForm2.btn4Click(Sender: TObject);
+procedure TForm3.btn4Click(Sender: TObject);
 begin
-if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+ if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from wali_kelas where id_wali="'+id+'"');
+zqry1.SQL.Add(' delete from wali_kelas where Id_orgtua="'+Id+'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
-zqry1.SQL.Add('select * from wali_kelas');
+zqry1.SQL.Add('select * from orang_tua');
 zqry1.Open;
 ShowMessage('DATA BERHASIL DIHAPUS');
 posisiawal;
@@ -169,20 +181,27 @@ begin
 end;
 end;
 
-procedure TForm2.btn5Click(Sender: TObject);
+procedure TForm3.btn5Click(Sender: TObject);
 begin
 posisiawal;
 end;
 
-procedure TForm2.bersih;
+procedure TForm3.btn6Click(Sender: TObject);
+begin
+frxReport1.ShowReport();
+end;
+
+procedure TForm3.bersih;
 begin
 edt1.Clear;
 edt2.Clear;
 edt3.Clear;
 edt4.Clear;
+edt5.Clear;
+edt6.Clear;
 end;
 
-procedure TForm2.FormShow(Sender: TObject);
+procedure TForm3.FormShow(Sender: TObject);
 begin
 bersih;
 btn1.Enabled:=true;
@@ -197,10 +216,12 @@ edt2.Enabled:= false;
 edt3.Enabled:= false;
 cbb1.Enabled:= false;
 edt4.Enabled:= false;
+edt5.Enabled:= false;
+edt6.Enabled:= false;
 cbb2.Enabled:= false;
 end;
 
-procedure TForm2.posisiawal;
+procedure TForm3.posisiawal;
 begin
  bersih;
 btn1.Enabled:= True;
@@ -215,10 +236,11 @@ edt2.Enabled:= false;
 edt3.Enabled:= false;
 cbb1.Enabled:= false;
 edt4.Enabled:= false;
+edt5.Enabled:= false;
+edt6.Enabled:= false;
 cbb2.Enabled:= false;
 end;
-
-procedure TForm2.dbgrd1CellClick(Column: TColumn);
+procedure TForm3.dbgrd1CellClick(Column: TColumn);
 begin
 id:= zqry1.Fields[0].AsString;
 edt1.Text:= zqry1.Fields[1].AsString;
@@ -226,7 +248,10 @@ edt2.Text:= zqry1.Fields[3].AsString;
 edt3.Text:= zqry1.Fields[4].AsString;
 cbb1.Text:= zqry1.Fields[5].AsString;
 edt4.Text:= zqry1.Fields[6].AsString;
-cbb2.Text:= zqry1.Fields[7].AsString;
+edt5.Text:= zqry1.Fields[7].AsString;
+edt6.Text:= zqry1.Fields[8].AsString;
+cbb2.Text:= zqry1.Fields[9].AsString;
+
 
 edt1.Enabled:= True;
 dtp1.Enabled:= True;
@@ -234,6 +259,8 @@ edt2.Enabled:= True;
 edt3.Enabled:= True;
 cbb1.Enabled:= True;
 edt4.Enabled:= True;
+edt5.Enabled:= True;
+edt6.Enabled:= True;
 cbb2.Enabled:= True;
 
 btn1.Enabled:= false;
@@ -243,14 +270,4 @@ btn4.Enabled:= True;
 btn5.Enabled:= True;
 end;
 
-
-
-procedure TForm2.btn6Click(Sender: TObject);
-begin
-frxReport1.ShowReport();
-end;
-
 end.
-
-
-
