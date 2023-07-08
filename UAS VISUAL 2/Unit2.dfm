@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 205
   Width = 849
   Height = 541
-  Caption = 'WALI KELAS'
+  Caption = 'TABEL WALI KELAS'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

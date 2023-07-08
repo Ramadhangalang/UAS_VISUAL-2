@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 217
   Width = 907
   Height = 484
-  Caption = 'ORTU'
+  Caption = 'TABEL ORANG TUA'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

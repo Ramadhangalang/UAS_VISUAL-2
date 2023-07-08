@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 201
   Width = 823
   Height = 541
-  Caption = 'SISWA'
+  Caption = 'TABEL SISWA'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
