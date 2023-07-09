@@ -60,11 +60,13 @@ object Form4: TForm4
       item
         Expanded = False
         FieldName = 'Nama_kelas'
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Jurusan'
+        Width = 100
         Visible = True
       end>
   end

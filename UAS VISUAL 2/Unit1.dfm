@@ -184,7 +184,7 @@ object Form1: TForm1
   object dbgrd1: TDBGrid
     Left = 22
     Top = 305
-    Width = 644
+    Width = 679
     Height = 157
     DataSource = ds1
     TabOrder = 0
@@ -194,6 +194,81 @@ object Form1: TForm1
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Id_Siswa'
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nis'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nisn'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nama_Siswa'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nik'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tanggal lahir'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Jenis Kelamin'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tingkat Kelas'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Jurusan'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Wali kelas'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Alamat'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Telp'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status'
+        Width = 75
+        Visible = True
+      end>
   end
   object btn1: TButton
     Left = 26

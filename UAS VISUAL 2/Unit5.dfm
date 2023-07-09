@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 270
-  Top = 179
+  Left = 297
+  Top = 235
   Width = 823
   Height = 493
   Caption = 'TABEL POIN'
@@ -151,6 +151,30 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Id_poin'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nama poin'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Bobot'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tipe poin'
+        Width = 200
+        Visible = True
+      end>
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -163,7 +187,7 @@ object Form5: TForm5
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'D:\UAS VISUAL 2\libmysql.dll'
-    Left = 542
+    Left = 457
     Top = 7
   end
   object zqry1: TZQuery
@@ -172,12 +196,12 @@ object Form5: TForm5
     SQL.Strings = (
       'select * from poin')
     Params = <>
-    Left = 506
+    Left = 501
     Top = 7
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 574
+    Left = 549
     Top = 7
   end
   object frxDBDataset1: TfrxDBDataset
@@ -203,7 +227,7 @@ object Form5: TForm5
       'begin'
       ''
       'end.')
-    Left = 646
+    Left = 661
     Top = 7
     Datasets = <
       item
