@@ -167,6 +167,7 @@ object Form2: TForm2
     Height = 33
     Caption = 'Print'
     TabOrder = 5
+    OnClick = btn6Click
   end
   object edt1: TEdit
     Left = 152
@@ -241,6 +242,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -317,9 +319,9 @@ object Form2: TForm2
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset'
     CloseDataSource = False
-    DataSet = zqry2
+    DataSet = zqry1
     BCDToCurrency = False
-    Left = 581
+    Left = 591
     Top = 92
   end
   object frxReport1: TfrxReport
@@ -331,14 +333,14 @@ object Form2: TForm2
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45115.316394930550000000
+    ReportOptions.LastChange = 45117.821389328700000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 626
-    Top = 92
+    Left = 651
+    Top = 97
     Datasets = <
       item
         DataSet = frxDBDataset1
@@ -360,11 +362,12 @@ object Form2: TForm2
       BottomMargin = 10.000000000000000000
       Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
       object ReportTitle1: TfrxReportTitle
-        Height = 41.574830000000000000
+        Height = 60.472480000000000000
         Top = 18.897650000000000000
         Width = 1046.929810000000000000
         object Memo13: TfrxMemoView
           Left = 332.598640000000000000
+          Top = 11.338590000000000000
           Width = 336.378170000000000000
           Height = 41.574830000000000000
           ShowHint = False
@@ -373,7 +376,6 @@ object Form2: TForm2
           Font.Height = -21
           Font.Name = 'Times New Roman'
           Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
             'LAPORAN DATA WALI KELAS')
@@ -383,7 +385,7 @@ object Form2: TForm2
       end
       object PageHeader1: TfrxPageHeader
         Height = 34.015770000000000000
-        Top = 83.149660000000000000
+        Top = 102.047310000000000000
         Width = 1046.929810000000000000
         object Memo1: TfrxMemoView
           Width = 34.015770000000000000
@@ -522,15 +524,15 @@ object Form2: TForm2
         end
       end
       object MasterData1: TfrxMasterData
-        Height = 71.811070000000000000
-        Top = 177.637910000000000000
+        Height = 45.354360000000000000
+        Top = 196.535560000000000000
         Width = 1046.929810000000000000
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset'
         RowCount = 0
         object Memo2: TfrxMemoView
           Width = 34.015770000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'id_wali'
           DataSet = frxDBDataset1
@@ -550,7 +552,7 @@ object Form2: TForm2
         object Memo4: TfrxMemoView
           Left = 34.015770000000000000
           Width = 166.299320000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'Nama_wali_kelas'
           DataSet = frxDBDataset1
@@ -570,9 +572,9 @@ object Form2: TForm2
         object Memo10: TfrxMemoView
           Left = 347.716760000000000000
           Width = 105.826840000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
-          DataField = 'Tanggal_lahir'
+          DataField = 'Telp'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
@@ -583,14 +585,14 @@ object Form2: TForm2
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Tanggal_lahir"]')
+            '[frxDBDataset."Telp"]')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo12: TfrxMemoView
           Left = 453.543600000000000000
           Width = 117.165430000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'Pendidikan'
           DataSet = frxDBDataset1
@@ -610,7 +612,7 @@ object Form2: TForm2
         object Memo6: TfrxMemoView
           Left = 200.315090000000000000
           Width = 147.401670000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'Tanggal_lahir'
           DataSet = frxDBDataset1
@@ -630,7 +632,7 @@ object Form2: TForm2
         object Memo15: TfrxMemoView
           Left = 570.709030000000000000
           Width = 120.944960000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'Status'
           DataSet = frxDBDataset1
@@ -650,7 +652,7 @@ object Form2: TForm2
         object Memo21: TfrxMemoView
           Left = 691.653990000000000000
           Width = 109.606370000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'Wali_Kelas'
           DataSet = frxDBDataset1
@@ -670,7 +672,7 @@ object Form2: TForm2
         object Memo25: TfrxMemoView
           Left = 801.260360000000000000
           Width = 245.669450000000000000
-          Height = 71.811070000000000000
+          Height = 45.354360000000000000
           ShowHint = False
           DataField = 'Jenis_Kelamin'
           DataSet = frxDBDataset1
@@ -690,18 +692,9 @@ object Form2: TForm2
       end
       object Footer1: TfrxFooter
         Height = 34.015770000000000000
-        Top = 272.126160000000000000
+        Top = 264.567100000000000000
         Width = 1046.929810000000000000
       end
     end
-  end
-  object zqry2: TZQuery
-    Connection = con1
-    Active = True
-    SQL.Strings = (
-      'select * from wali_kelas')
-    Params = <>
-    Left = 667
-    Top = 97
   end
 end

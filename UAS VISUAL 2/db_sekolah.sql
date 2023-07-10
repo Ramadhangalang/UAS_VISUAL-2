@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Jul 2023 pada 07.05
+-- Waktu pembuatan: 10 Jul 2023 pada 14.03
 -- Versi server: 10.4.27-MariaDB
--- Versi PHP: 8.0.25
+-- Versi PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,15 +34,16 @@ CREATE TABLE `catatan` (
   `Id_siswa` varchar(10) NOT NULL,
   `Id_wali kelas` varchar(10) NOT NULL,
   `Id_orgtua` varchar(10) NOT NULL,
-  `Id_poin` varchar(10) NOT NULL
+  `Id_poin` varchar(10) NOT NULL,
+  `keterangan` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `catatan`
 --
 
-INSERT INTO `catatan` (`Id_catatan`, `Tanggal`, `Semester`, `Id_siswa`, `Id_wali kelas`, `Id_orgtua`, `Id_poin`) VALUES
-(1, '23-03-2023', 'Semester 2', '1', '1', '1', '1');
+INSERT INTO `catatan` (`Id_catatan`, `Tanggal`, `Semester`, `Id_siswa`, `Id_wali kelas`, `Id_orgtua`, `Id_poin`, `keterangan`) VALUES
+(1, '17-02-2023', 'Semester 1', '1', '1', '1', '1', 'Baik');
 
 -- --------------------------------------------------------
 
@@ -109,8 +110,8 @@ CREATE TABLE `orang_tua` (
 --
 
 INSERT INTO `orang_tua` (`Id_orgtua`, `Nama_orangtua`, `Tanggal_lahir`, `Telp`, `Pendidikan_terakhir`, `Status_pekerjaan`, `Pekerjaan`, `Nik_nomorKTP`, `Alamat_orgtua`, `Status_orgtua`) VALUES
-(1, 'SITI FATIMAH', '21-02-1988', '082252567828', 'SMA Sederajat', 'Aktif', 'Admin Tambang', '2100928372', 'Desa Sikui km27', 'Kandung'),
-(2, 'AHMAD', '1991-06-14', '082252174563', 'SMA Sederajat', 'Aktif', 'SUPIR TAMBANG', '2100928312', 'Desa Sikui km35', 'Kandung');
+(1, 'RINI', '21-02-1988', '082252567828', 'SMA Sederajat', 'Aktif', 'PNS', '2100928372', 'JL', 'Kandung'),
+(2, 'MUHAMMAD', '1991-06-14', '082252174563', 'SMA Sederajat', 'Aktif', 'PNS', '2100928312', 'JL', 'Kandung');
 
 -- --------------------------------------------------------
 
@@ -159,8 +160,8 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`Id_Siswa`, `Nis`, `Nisn`, `Nama_Siswa`, `Nik`, `Tanggal lahir`, `Jenis Kelamin`, `Tingkat Kelas`, `Jurusan`, `Wali kelas`, `Alamat`, `Telp`, `Status`) VALUES
-(1, 2147483000, 20022111, 'Muhammad faishal', 610034522, '20', 'Laki-laki', 'Kelas_8', 'Ipa', 'Sri wulan', 'Flamboyan_2', '82152776123', 'siswa'),
-(2, 21120011, 323232011, 'Galang', 1000000, '2003-05-16', 'LAKI-LAKI', '12 A', 'IPS', 'Sugianir', 'Desa Hajak', '082252173509', 'AKTIF');
+(1, 89858757, 200221, 'Muhammad', 610034522, '20', 'Laki-laki', 'Kelas_8', 'Ipa', 'Sri wulan', 'JL, Sri', '82152776123', 'siswa'),
+(2, 21120011, 323232011, 'Galang', 1000000, '2003-05-16', 'LAKI-LAKI', '12 A', 'IPS', 'Sugianir', 'JL, Merak', '082252173509', 'AKTIF');
 
 -- --------------------------------------------------------
 
@@ -181,7 +182,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Id_user`, `Nik`, `Nama`, `Level`, `Status`) VALUES
-(1, '2110202934', 'Desi', 'Admin', 'Guru');
+(1, '2110202934', 'Agus', 'Admin', 'Guru');
 
 -- --------------------------------------------------------
 
@@ -205,8 +206,8 @@ CREATE TABLE `wali_kelas` (
 --
 
 INSERT INTO `wali_kelas` (`id_wali`, `Nama_wali_kelas`, `Tanggal_lahir`, `Telp`, `Pendidikan`, `Status`, `Wali_Kelas`, `Jenis_Kelamin`) VALUES
-(1, 'AHMAD Efendi', '2023-04-26', '082252173504', 'S1 Hukum', 'MENIKAH', '12 C', 'PEREMPUAN'),
-(2, 'muhammad IBAL', '2023-05-21', '082252173004', 'S1 Kehutanan', 'BELUM MENIKAH', '10 B', 'LAKI-LAKI');
+(1, 'YUSUF', '2023-04-26', '082252173504', 'S1 ', 'MENIKAH', '12 C', 'LAKI-LAKI'),
+(2, 'AHMAD', '2023-05-21', '082252173004', 'S1 ', 'BELUM MENIKAH', '10 B', 'LAKI-LAKI');
 
 --
 -- Indexes for dumped tables

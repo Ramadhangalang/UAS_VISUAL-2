@@ -200,6 +200,7 @@ object Form8: TForm8
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -310,7 +311,7 @@ object Form8: TForm8
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45116.427213622700000000
+    ReportOptions.LastChange = 45117.834952592600000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -330,9 +331,9 @@ object Form8: TForm8
       Width = 1000.000000000000000000
     end
     object Page1: TfrxReportPage
-      PaperWidth = 297.000000000000000000
-      PaperHeight = 420.000000000000000000
-      PaperSize = 8
+      PaperWidth = 250.000000000000000000
+      PaperHeight = 354.000000000000000000
+      PaperSize = 257
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
@@ -341,9 +342,9 @@ object Form8: TForm8
       object ReportTitle1: TfrxReportTitle
         Height = 60.472480000000000000
         Top = 18.897650000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
         object Memo13: TfrxMemoView
-          Left = 374.173470000000000000
+          Left = 264.567100000000000000
           Top = 11.338590000000000000
           Width = 336.378170000000000000
           Height = 41.574830000000000000
@@ -363,7 +364,7 @@ object Form8: TForm8
       object PageHeader1: TfrxPageHeader
         Height = 34.015770000000000000
         Top = 102.047310000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
         object Memo1: TfrxMemoView
           Width = 34.015770000000000000
           Height = 34.015770000000000000
@@ -382,7 +383,7 @@ object Form8: TForm8
         end
         object Memo3: TfrxMemoView
           Left = 34.015770000000000000
-          Width = 166.299320000000000000
+          Width = 136.063080000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -398,8 +399,8 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo5: TfrxMemoView
-          Left = 200.315090000000000000
-          Width = 147.401670000000000000
+          Left = 170.078850000000000000
+          Width = 128.504020000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -415,7 +416,7 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo9: TfrxMemoView
-          Left = 347.716760000000000000
+          Left = 298.582870000000000000
           Width = 105.826840000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -432,7 +433,7 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo11: TfrxMemoView
-          Left = 453.543600000000000000
+          Left = 404.409710000000000000
           Width = 117.165430000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -449,7 +450,7 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo14: TfrxMemoView
-          Left = 570.709030000000000000
+          Left = 521.575140000000000000
           Width = 120.944960000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -466,8 +467,8 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo16: TfrxMemoView
-          Left = 691.653990000000000000
-          Width = 109.606370000000000000
+          Left = 642.520100000000000000
+          Width = 79.370130000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -483,8 +484,8 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo7: TfrxMemoView
-          Left = 801.260360000000000000
-          Width = 128.504020000000000000
+          Left = 721.890230000000000000
+          Width = 147.401670000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -509,7 +510,7 @@ object Form8: TForm8
         Height = 34.015770000000000000
         ParentFont = False
         Top = 196.535560000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset'
         RowCount = 0
@@ -534,7 +535,7 @@ object Form8: TForm8
         end
         object Memo4: TfrxMemoView
           Left = 34.015770000000000000
-          Width = 166.299320000000000000
+          Width = 136.063080000000000000
           Height = 34.015770000000000000
           ShowHint = False
           DataField = 'Tanggal'
@@ -553,7 +554,7 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo10: TfrxMemoView
-          Left = 347.716760000000000000
+          Left = 298.582870000000000000
           Width = 105.826840000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -573,7 +574,7 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo12: TfrxMemoView
-          Left = 453.543600000000000000
+          Left = 404.409710000000000000
           Width = 117.165430000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -593,8 +594,8 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo6: TfrxMemoView
-          Left = 200.315090000000000000
-          Width = 147.401670000000000000
+          Left = 170.078850000000000000
+          Width = 128.504020000000000000
           Height = 34.015770000000000000
           ShowHint = False
           DataField = 'Semester'
@@ -613,7 +614,7 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo15: TfrxMemoView
-          Left = 570.709030000000000000
+          Left = 521.575140000000000000
           Width = 120.944960000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -633,8 +634,8 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo21: TfrxMemoView
-          Left = 691.653990000000000000
-          Width = 109.606370000000000000
+          Left = 642.520100000000000000
+          Width = 79.370130000000000000
           Height = 34.015770000000000000
           ShowHint = False
           DataField = 'Id_poin'
@@ -653,8 +654,8 @@ object Form8: TForm8
           VAlign = vaCenter
         end
         object Memo8: TfrxMemoView
-          Left = 801.260360000000000000
-          Width = 128.504020000000000000
+          Left = 721.890230000000000000
+          Width = 147.401670000000000000
           Height = 34.015770000000000000
           ShowHint = False
           DataField = 'keterangan'
@@ -676,7 +677,7 @@ object Form8: TForm8
       object Footer1: TfrxFooter
         Height = 34.015770000000000000
         Top = 253.228510000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
       end
     end
   end

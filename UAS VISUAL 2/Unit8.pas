@@ -177,6 +177,7 @@ edt2.Clear;
 edt3.Clear;
 edt4.Clear;
 edt5.Clear;
+edt6.Clear;
 end;
 
 procedure TForm8.FormShow(Sender: TObject);
@@ -194,6 +195,7 @@ edt2.Enabled:= false;
 edt3.Enabled:= false;
 edt4.Enabled:= false;
 edt5.Enabled:= false;
+edt6.Enabled:= false;
 end;
 
 procedure TForm8.posisiawal;
@@ -210,6 +212,7 @@ edt2.Enabled:= false;
 edt3.Enabled:= false;
 edt4.Enabled:= false;
 edt5.Enabled:= false;
+edt6.Enabled:= false;
 end;
 procedure TForm8.dbgrd1CellClick(Column: TColumn);
 begin
@@ -219,6 +222,7 @@ edt2.Text:= zqry1.Fields[3].AsString;
 edt3.Text:= zqry1.Fields[4].AsString;
 edt4.Text:= zqry1.Fields[5].AsString;
 edt5.Text:= zqry1.Fields[6].AsString;
+edt6.Text:= zqry1.Fields[7].AsString;
 
 dtp1.Enabled:= True;
 edt1.Enabled:= True;
@@ -226,6 +230,7 @@ edt2.Enabled:= True;
 edt3.Enabled:= True;
 edt4.Enabled:= True;
 edt5.Enabled:= True;
+edt6.Enabled:= True;
 
 btn1.Enabled:= false;
 btn2.Enabled:= False;

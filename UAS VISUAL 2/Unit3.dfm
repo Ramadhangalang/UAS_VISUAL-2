@@ -271,6 +271,7 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -363,7 +364,6 @@ object Form3: TForm3
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset'
     CloseDataSource = False
-    DataSet = zqry2
     BCDToCurrency = False
     Left = 591
     Top = 132
@@ -377,7 +377,7 @@ object Form3: TForm3
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45115.358624004630000000
+    ReportOptions.LastChange = 45117.824463310190000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -411,7 +411,8 @@ object Form3: TForm3
         Top = 18.897650000000000000
         Width = 1511.812000000000000000
         object Memo13: TfrxMemoView
-          Left = 351.496290000000000000
+          Left = 593.386210000000000000
+          Top = 11.338590000000000000
           Width = 336.378170000000000000
           Height = 41.574830000000000000
           ShowHint = False
@@ -432,6 +433,7 @@ object Form3: TForm3
         Top = 98.267780000000000000
         Width = 1511.812000000000000000
         object Memo1: TfrxMemoView
+          Left = 151.181200000000000000
           Width = 34.015770000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -448,7 +450,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo3: TfrxMemoView
-          Left = 34.015770000000000000
+          Left = 185.196970000000000000
           Width = 154.960730000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -465,7 +467,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo5: TfrxMemoView
-          Left = 340.157700000000000000
+          Left = 491.338900000000000000
           Width = 102.047310000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -482,7 +484,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo9: TfrxMemoView
-          Left = 442.205010000000000000
+          Left = 593.386210000000000000
           Width = 117.165430000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -499,7 +501,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo11: TfrxMemoView
-          Left = 559.370440000000000000
+          Left = 710.551640000000000000
           Width = 154.960730000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -516,7 +518,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo14: TfrxMemoView
-          Left = 714.331170000000000000
+          Left = 865.512370000000000000
           Width = 120.944960000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -533,7 +535,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo16: TfrxMemoView
-          Left = 835.276130000000000000
+          Left = 986.457330000000000000
           Width = 109.606370000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -550,7 +552,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo17: TfrxMemoView
-          Left = 944.882500000000000000
+          Left = 1096.063700000000000000
           Width = 105.826840000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -567,7 +569,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo7: TfrxMemoView
-          Left = 1050.709340000000000000
+          Left = 1201.890540000000000000
           Width = 154.960730000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -584,7 +586,7 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo18: TfrxMemoView
-          Left = 188.976500000000000000
+          Left = 340.157700000000000000
           Width = 151.181200000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -602,15 +604,16 @@ object Form3: TForm3
         end
       end
       object MasterData1: TfrxMasterData
-        Height = 71.811070000000000000
+        Height = 41.574830000000000000
         Top = 192.756030000000000000
         Width = 1511.812000000000000000
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset'
         RowCount = 0
         object Memo2: TfrxMemoView
+          Left = 151.181200000000000000
           Width = 34.015770000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Id_orgtua'
           DataSet = frxDBDataset1
@@ -628,9 +631,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo4: TfrxMemoView
-          Left = 34.015770000000000000
+          Left = 185.196970000000000000
           Width = 154.960730000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Nama_orangtua'
           DataSet = frxDBDataset1
@@ -648,9 +651,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo10: TfrxMemoView
-          Left = 442.205010000000000000
+          Left = 593.386210000000000000
           Width = 117.165430000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Pendidikan_terakhir'
           DataSet = frxDBDataset1
@@ -668,9 +671,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo12: TfrxMemoView
-          Left = 559.370440000000000000
+          Left = 710.551640000000000000
           Width = 154.960730000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Status_pekerjaan'
           DataSet = frxDBDataset1
@@ -688,9 +691,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo6: TfrxMemoView
-          Left = 340.157700000000000000
+          Left = 491.338900000000000000
           Width = 102.047310000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Telp'
           DataSet = frxDBDataset1
@@ -708,9 +711,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo15: TfrxMemoView
-          Left = 714.331170000000000000
+          Left = 865.512370000000000000
           Width = 120.944960000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Pekerjaan'
           DataSet = frxDBDataset1
@@ -728,9 +731,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo21: TfrxMemoView
-          Left = 835.276130000000000000
+          Left = 986.457330000000000000
           Width = 109.606370000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Nik_nomorKTP'
           DataSet = frxDBDataset1
@@ -748,9 +751,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo25: TfrxMemoView
-          Left = 944.882500000000000000
+          Left = 1096.063700000000000000
           Width = 105.826840000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Alamat_orgtua'
           DataSet = frxDBDataset1
@@ -768,9 +771,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo8: TfrxMemoView
-          Left = 1050.709340000000000000
+          Left = 1201.890540000000000000
           Width = 154.960730000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Status_orgtua'
           DataSet = frxDBDataset1
@@ -788,9 +791,9 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo19: TfrxMemoView
-          Left = 188.976500000000000000
+          Left = 340.157700000000000000
           Width = 151.181200000000000000
-          Height = 71.811070000000000000
+          Height = 41.574830000000000000
           ShowHint = False
           DataField = 'Tanggal_lahir'
           DataSet = frxDBDataset1
@@ -810,18 +813,9 @@ object Form3: TForm3
       end
       object Footer1: TfrxFooter
         Height = 34.015770000000000000
-        Top = 287.244280000000000000
+        Top = 257.008040000000000000
         Width = 1511.812000000000000000
       end
     end
-  end
-  object zqry2: TZQuery
-    Connection = con1
-    Active = True
-    SQL.Strings = (
-      'select * from orang_tua')
-    Params = <>
-    Left = 702
-    Top = 132
   end
 end

@@ -169,6 +169,7 @@ object Form7: TForm7
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -243,7 +244,7 @@ object Form7: TForm7
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45116.406706250000000000
+    ReportOptions.LastChange = 45117.833239340300000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -263,9 +264,9 @@ object Form7: TForm7
       Width = 1000.000000000000000000
     end
     object Page1: TfrxReportPage
-      PaperWidth = 297.000000000000000000
-      PaperHeight = 420.000000000000000000
-      PaperSize = 8
+      PaperWidth = 250.000000000000000000
+      PaperHeight = 354.000000000000000000
+      PaperSize = 12
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
@@ -274,7 +275,7 @@ object Form7: TForm7
       object ReportTitle1: TfrxReportTitle
         Height = 60.472480000000000000
         Top = 18.897650000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
         object Memo13: TfrxMemoView
           Left = 306.141930000000000000
           Top = 11.338590000000000000
@@ -296,7 +297,7 @@ object Form7: TForm7
       object PageHeader1: TfrxPageHeader
         Height = 34.015770000000000000
         Top = 102.047310000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
         object Memo1: TfrxMemoView
           Width = 98.267780000000000000
           Height = 34.015770000000000000
@@ -366,7 +367,7 @@ object Form7: TForm7
         end
         object Memo11: TfrxMemoView
           Left = 661.417750000000000000
-          Width = 166.299320000000000000
+          Width = 207.874150000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -383,15 +384,15 @@ object Form7: TForm7
         end
       end
       object MasterData1: TfrxMasterData
-        Height = 41.574830000000000000
+        Height = 30.236240000000000000
         Top = 196.535560000000000000
-        Width = 1046.929810000000000000
+        Width = 869.291900000000000000
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset'
         RowCount = 0
         object Memo2: TfrxMemoView
-          Width = 98.267780000000000000
-          Height = 41.574830000000000000
+          Width = 98.267780002597400000
+          Height = 30.236240000000000000
           ShowHint = False
           DataField = 'Id_hubungan'
           DataSet = frxDBDataset1
@@ -409,9 +410,9 @@ object Form7: TForm7
           VAlign = vaCenter
         end
         object Memo4: TfrxMemoView
-          Left = 98.267780000000000000
-          Width = 166.299320000000000000
-          Height = 41.574830000000000000
+          Left = 98.267780002597400000
+          Width = 166.299319998268000000
+          Height = 30.236240000000000000
           ShowHint = False
           DataField = 'Id_siswa'
           DataSet = frxDBDataset1
@@ -429,9 +430,9 @@ object Form7: TForm7
           VAlign = vaCenter
         end
         object Memo10: TfrxMemoView
-          Left = 461.102660000000000000
-          Width = 200.315090000000000000
-          Height = 41.574830000000000000
+          Left = 461.102659996104000000
+          Width = 200.315089996104000000
+          Height = 30.236240000000000000
           ShowHint = False
           DataField = 'Status hub anak'
           DataSet = frxDBDataset1
@@ -449,9 +450,9 @@ object Form7: TForm7
           VAlign = vaCenter
         end
         object Memo12: TfrxMemoView
-          Left = 661.417750000000000000
-          Width = 166.299320000000000000
-          Height = 41.574830000000000000
+          Left = 661.417750002165000000
+          Width = 207.874149997835000000
+          Height = 30.236240000000000000
           ShowHint = False
           DataField = 'Keterangan'
           DataSet = frxDBDataset1
@@ -469,9 +470,9 @@ object Form7: TForm7
           VAlign = vaCenter
         end
         object Memo6: TfrxMemoView
-          Left = 264.567100000000000000
-          Width = 196.535560000000000000
-          Height = 41.574830000000000000
+          Left = 264.567100000866000000
+          Width = 196.535559995238000000
+          Height = 30.236240000000000000
           ShowHint = False
           DataField = 'Status hub anak'
           DataSet = frxDBDataset1

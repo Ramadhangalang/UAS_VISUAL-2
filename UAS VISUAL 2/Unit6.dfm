@@ -169,6 +169,7 @@ object Form6: TForm6
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -244,7 +245,7 @@ object Form6: TForm6
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45116.408956562500000000
+    ReportOptions.LastChange = 45117.831140254600000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -264,9 +265,9 @@ object Form6: TForm6
       Width = 1000.000000000000000000
     end
     object Page1: TfrxReportPage
-      PaperWidth = 297.000000000000000000
-      PaperHeight = 420.000000000000000000
-      PaperSize = 8
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
@@ -275,9 +276,9 @@ object Form6: TForm6
       object ReportTitle1: TfrxReportTitle
         Height = 56.692950000000000000
         Top = 18.897650000000000000
-        Width = 1046.929810000000000000
+        Width = 718.110700000000000000
         object Memo13: TfrxMemoView
-          Left = 302.362400000000000000
+          Left = 196.535560000000000000
           Top = 7.559060000000000000
           Width = 336.378170000000000000
           Height = 41.574830000000000000
@@ -297,9 +298,9 @@ object Form6: TForm6
       object PageHeader1: TfrxPageHeader
         Height = 34.015770000000000000
         Top = 98.267780000000000000
-        Width = 1046.929810000000000000
+        Width = 718.110700000000000000
         object Memo1: TfrxMemoView
-          Width = 71.811070000000000000
+          Width = 49.133890000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -315,8 +316,8 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo3: TfrxMemoView
-          Left = 71.811070000000000000
-          Width = 166.299320000000000000
+          Left = 49.133890000000000000
+          Width = 124.724490000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -332,7 +333,7 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo5: TfrxMemoView
-          Left = 238.110390000000000000
+          Left = 173.858380000000000000
           Width = 196.535560000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -349,7 +350,7 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo9: TfrxMemoView
-          Left = 434.645950000000000000
+          Left = 370.393940000000000000
           Width = 181.417440000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -366,8 +367,8 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo11: TfrxMemoView
-          Left = 616.063390000000000000
-          Width = 185.196970000000000000
+          Left = 551.811380000000000000
+          Width = 166.299320000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -386,13 +387,13 @@ object Form6: TForm6
       object MasterData1: TfrxMasterData
         Height = 90.708720000000000000
         Top = 192.756030000000000000
-        Width = 1046.929810000000000000
+        Width = 718.110700000000000000
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset'
         RowCount = 0
         object Memo2: TfrxMemoView
-          Width = 71.811070000000000000
-          Height = 49.133890000000000000
+          Width = 45.354360000000000000
+          Height = 37.795300000000000000
           ShowHint = False
           DataField = 'Id_user'
           DataSet = frxDBDataset1
@@ -410,9 +411,9 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo4: TfrxMemoView
-          Left = 71.811070000000000000
-          Width = 166.299320000000000000
-          Height = 49.133890000000000000
+          Left = 45.354360000000000000
+          Width = 128.504020000000000000
+          Height = 37.795300000000000000
           ShowHint = False
           DataField = 'Nik'
           DataSet = frxDBDataset1
@@ -430,9 +431,9 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo10: TfrxMemoView
-          Left = 434.645950000000000000
+          Left = 370.393940000000000000
           Width = 181.417440000000000000
-          Height = 49.133890000000000000
+          Height = 37.795300000000000000
           ShowHint = False
           DataField = 'Level'
           DataSet = frxDBDataset1
@@ -450,9 +451,9 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo12: TfrxMemoView
-          Left = 616.063390000000000000
-          Width = 185.196970000000000000
-          Height = 49.133890000000000000
+          Left = 551.811380000000000000
+          Width = 166.299320000000000000
+          Height = 37.795300000000000000
           ShowHint = False
           DataField = 'Status'
           DataSet = frxDBDataset1
@@ -470,9 +471,9 @@ object Form6: TForm6
           VAlign = vaCenter
         end
         object Memo6: TfrxMemoView
-          Left = 238.110390000000000000
+          Left = 173.858380000000000000
           Width = 196.535560000000000000
-          Height = 49.133890000000000000
+          Height = 37.795300000000000000
           ShowHint = False
           DataField = 'Nama'
           DataSet = frxDBDataset1

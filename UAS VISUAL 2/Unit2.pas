@@ -37,7 +37,6 @@ type
     ds1: TDataSource;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
-    zqry2: TZQuery;
      procedure FormShow(Sender: TObject);
     procedure bersih;
     procedure posisiawal;

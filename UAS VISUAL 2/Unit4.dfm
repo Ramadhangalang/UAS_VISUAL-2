@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 305
-  Top = 245
+  Left = 406
+  Top = 254
   Width = 794
   Height = 459
   Caption = 'TABEL KELAS'
@@ -51,6 +51,7 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -171,6 +172,7 @@ object Form4: TForm4
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset'
     CloseDataSource = False
+    DataSet = zqry1
     BCDToCurrency = False
     Left = 571
     Top = 7
@@ -184,7 +186,7 @@ object Form4: TForm4
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45115.388059085650000000
+    ReportOptions.LastChange = 45117.826395439810000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -217,7 +219,8 @@ object Form4: TForm4
         Top = 18.897650000000000000
         Width = 718.110700000000000000
         object Memo13: TfrxMemoView
-          Left = 211.653680000000000000
+          Left = 207.874150000000000000
+          Top = 7.559060000000000000
           Width = 336.378170000000000000
           Height = 26.456710000000000000
           ShowHint = False
